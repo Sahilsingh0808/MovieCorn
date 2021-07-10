@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="poster_grey">#707070</color>
+    <color name="skin">#FFDE9C</color>
 </resources>
