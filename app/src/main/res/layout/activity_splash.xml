@@ -24,7 +24,7 @@
                 android:layout_marginBottom="100dp"
                 android:fontFamily="@font/cuprum_bold"
                 android:text="Welcome"
-                android:textColor="@color/white"
+                android:textColor="@color/skin"
                 android:textSize="32sp" />
 
             <ImageView
@@ -43,8 +43,8 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/aguafina_script"
-                android:text="an app by Sahil Singh"
-                android:textColor="#C8C1C1"
+                android:text="developed by Sahil Singh"
+                android:textColor="@color/skin"
                 android:textSize="24sp"
                 android:textStyle="italic" />
         </LinearLayout>

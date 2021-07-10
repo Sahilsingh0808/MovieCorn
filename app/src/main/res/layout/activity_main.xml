@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/design_default_color_primary"
+            app:contentScrim="@color/poster_grey"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             app:toolbarId="@+id/toolbar">
 
@@ -95,7 +95,8 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:background="@drawable/background"
-                android:text="Continue" />
+                android:text="Continue"
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/textView12"
