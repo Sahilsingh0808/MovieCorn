@@ -1,0 +1,2 @@
+rootProject.name = "Movies, Series - All for Free"
+include ':app'
