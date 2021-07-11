@@ -8,17 +8,21 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class Splash extends Activity {
 
     /** Duration of wait **/
-    private final int SPLASH_DISPLAY_LENGTH = 4500;
+    private final int SPLASH_DISPLAY_LENGTH = 4000;
     private ImageView splashscreen;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.activity_splash);
+
         splashscreen=(ImageView)findViewById(R.id.splashscreen);
 
         splashscreen.animate().alpha(1).setDuration(4000);
