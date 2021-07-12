@@ -197,6 +197,7 @@ public class Web extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_web);
         progressBar=(ProgressBar)findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);

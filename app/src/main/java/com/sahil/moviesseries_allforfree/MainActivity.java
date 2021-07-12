@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_main);
         appBarLayout = (AppBarLayout) findViewById(R.id.app_bar);
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordlay);
@@ -67,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
         Button contin=(Button)dialog.findViewById(R.id.button3);
         dialog.show();
         cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                coordinatorLayout.animate().alpha(1).setDuration(1000);
+                                      @Override
+                                      public void onClick(View v) {
+                                          dialog.dismiss();
+                                          coordinatorLayout.animate().alpha(1).setDuration(1000);
 //                scrollView.fullScroll(View.FOCUS_DOWN);
 //                View lastChild = scrollView.getChildAt(scrollView.getChildCount() - 1);
 //                int bottom = lastChild.getBottom() + scrollView.getPaddingBottom();
@@ -93,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
 //                scrollView.fullScroll(View.FOCUS_DOWN);
 //
 //            }
+            }
+        });
 
 
                 contin.setOnClickListener(new View.OnClickListener() {
@@ -111,8 +114,6 @@ public class MainActivity extends AppCompatActivity {
                 });
 
             }
-        });
-        }
 
             public void rateApp(View view) {
                 try {
