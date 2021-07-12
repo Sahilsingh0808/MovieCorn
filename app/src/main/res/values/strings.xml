@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Movies, Series - All for Free</string>
+    <string name="app_name">MovieCorn</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
 </resources>

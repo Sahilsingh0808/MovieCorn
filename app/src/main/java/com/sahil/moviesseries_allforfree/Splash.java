@@ -15,7 +15,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class Splash extends Activity {
 
     /** Duration of wait **/
-    private final int SPLASH_DISPLAY_LENGTH = 4000;
+    private final int SPLASH_DISPLAY_LENGTH_TOTAL = 7000;
+    private final int SPLASH_DISPLAY_LENGTH_LOGO = 3700;
     private ImageView splashscreen;
     /** Called when the activity is first created. */
     @Override
@@ -25,9 +26,25 @@ public class Splash extends Activity {
 
         splashscreen=(ImageView)findViewById(R.id.splashscreen);
 
-        splashscreen.animate().alpha(1).setDuration(5000);
+        splashscreen.animate().alpha(1).setDuration(3000);
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
+
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                splashscreen.animate().alpha(0).setDuration(700);
+            }
+        }, 3000);
+
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                splashscreen.setImageResource(R.drawable.moviecorn);
+                splashscreen.animate().alpha(1).setDuration(3000);
+            }
+        }, SPLASH_DISPLAY_LENGTH_LOGO);
+
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
@@ -36,6 +53,7 @@ public class Splash extends Activity {
                 Splash.this.startActivity(mainIntent);
                 Splash.this.finish();
             }
-        }, SPLASH_DISPLAY_LENGTH);
+        }, SPLASH_DISPLAY_LENGTH_TOTAL);
+
     }
 }
