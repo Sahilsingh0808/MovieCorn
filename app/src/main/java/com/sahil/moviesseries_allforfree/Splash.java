@@ -25,7 +25,7 @@ public class Splash extends Activity {
 
         splashscreen=(ImageView)findViewById(R.id.splashscreen);
 
-        splashscreen.animate().alpha(1).setDuration(4000);
+        splashscreen.animate().alpha(1).setDuration(5000);
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
         new Handler().postDelayed(new Runnable(){

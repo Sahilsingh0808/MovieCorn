@@ -17,9 +17,10 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="233dp"
+            android:layout_height="42dp"
             android:fontFamily="@font/cuprum_bold"
+            android:gravity="center"
             android:text="Are you sure you want to continue?"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
@@ -29,8 +30,8 @@
 
         <TextView
             android:id="@+id/text"
-            android:layout_width="276dp"
-            android:layout_height="191dp"
+            android:layout_width="278dp"
+            android:layout_height="177dp"
             android:background="@drawable/background"
             android:gravity="center"
             android:lineSpacingExtra="15dp"
