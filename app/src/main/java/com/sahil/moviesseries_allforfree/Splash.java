@@ -16,7 +16,7 @@ public class Splash extends Activity {
 
     /** Duration of wait **/
     private final int SPLASH_DISPLAY_LENGTH_TOTAL = 7000;
-    private final int SPLASH_DISPLAY_LENGTH_LOGO = 3700;
+    private final int SPLASH_DISPLAY_LENGTH_LOGO = 3500;
     private ImageView splashscreen;
     /** Called when the activity is first created. */
     @Override

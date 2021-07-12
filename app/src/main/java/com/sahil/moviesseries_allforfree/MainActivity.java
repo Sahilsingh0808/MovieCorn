@@ -23,6 +23,8 @@ import android.widget.Toast;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView textView3,textView5,textView6;
@@ -185,5 +187,45 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }
+
+    @Override
+    public void onBackPressed() {
+
+        dialog.setContentView(R.layout.custom_dialog);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        Button cancel=(Button)dialog.findViewById(R.id.button2);
+        Button contin=(Button)dialog.findViewById(R.id.button3);
+        TextView heading=(TextView)dialog.findViewById(R.id.textView);
+        TextView content=(TextView)dialog.findViewById(R.id.text);
+        coordinatorLayout.animate().alpha(0.2f).setDuration(2000);
+        heading.setText("Quit App");
+        content.setText("Are you sure that you would like to exit?");
+        cancel.setText("NO");
+        contin.setText("YES");
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                coordinatorLayout.animate().alpha(1).setDuration(1000);
+                dialog.dismiss();
+            }
+        });
+        contin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                coordinatorLayout.animate().alpha(1).setDuration(1000);
+                finishAffinity();
+            }
+        });
+        dialog.show();
+
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                coordinatorLayout.animate().alpha(1).setDuration(1000);
+            }
+        });
+    }
+
 
 }
