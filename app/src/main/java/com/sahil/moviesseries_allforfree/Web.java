@@ -234,6 +234,7 @@ public class Web extends AppCompatActivity {
             webSettings.setAllowFileAccess(true);
             webSettings.setAppCacheEnabled(true);
 
+
             if (savedInstanceState == null) {
                 mWebView.loadUrl("https://ev01.to/");
             }
@@ -314,6 +315,8 @@ public class Web extends AppCompatActivity {
             ((FrameLayout)getWindow().getDecorView()).addView(this.mCustomView, new FrameLayout.LayoutParams(-1, -1));
             getWindow().getDecorView().setSystemUiVisibility(3846 | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         }
+
+
     }
 
     @Override
